@@ -1,38 +1,219 @@
 .App {
-  text-align: center;
+    text-align: center;
+    position: absolute;
+    width: 375px;
+    height: 667px;
+    left: 98px;
+    top: 184px;
+    overflow: hidden;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.iphone {
+    background: url(/iphone.png);
+    height: 1090px;
+    width: 578px;
+    background-size: contain;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+}
+
+.ling,.Time{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+}
+
+.Time .timetext {
+    font-size: 60px;
+}
+
+.Time .close {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    outline: 0;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    line-height: 0px;
+    right: 20px;
+    bottom: 20px;
+}
+
+.time{
+    width: 300px;
+    font-size: 50px;
+}
+.item{
+    width: 50px;
+    display: inline-block;
+}
+
+.setting{
+    position: absolute;
+    width: 100%;
+    height: 100;
+    top: 0;
+    bottom: 0;
+    overflow:hidden;
+}
+
+.setting .title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+}
+
+.setting input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+.setting .pricetime{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-align: left;
+    background: #fff;
+}
+
+.setting .pricetime .value{
+    margin: 0 0 0 20px;
+    color: #f00;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.setting .yes{
+    background: #fbb530;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    outline: 0;
+    border: none;
+    border-radius: 0px;
+    font-size: 25px;
+}
+
+.setting .list{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    overflow: scroll;
+}
+
+.setting .listitem{
+    width:100%;
+    background: #ccc;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 20px;
+    text-align: left;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.setting .listitem .count_cp{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-self: center;
+    position: absolute;
+    right: 10px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.count_cp button{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    margin: 10px auto;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.ling{
+    display: flex;
+}
+@media screen and (max-width: 375px) {
+    .iphone {
+        background: none;
+        width: 100%;
+        height: 100%;
+    }
+    .App {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .App-header {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
